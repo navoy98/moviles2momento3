@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/AppNotasFirebase2020" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/m2repaso" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/m2repaso/AndroidRepasoMedioCRUDSQLite" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/moviles_II" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/moviles_III/AwesomeProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/moviles_III/momentoI" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nuevasTecnologias" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nuevasTecnologias/phyton" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/nuevasTecnologias/taller" vcs="Git" />
+  </component>
+</project>
