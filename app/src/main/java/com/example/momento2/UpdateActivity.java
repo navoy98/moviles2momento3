@@ -1,6 +1,12 @@
 package com.example.momento2;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 
 import com.example.momento2.models.ShoesModels;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -8,51 +14,44 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.DocumentReference;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.widget.Toolbar;
+public class UpdateActivity extends BaseActivity {
 
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-
-public class CreateActivity extends BaseActivity {
-
-    FloatingActionButton fab_create_save, fab_create_clear, fab_create_back;
-    ImageView iv_create_image;
-    EditText et_create_brand, et_create_size, et_create_description;
+    FloatingActionButton fab_update_save, fab_update_clear, fab_update_back;
+    ImageView iv_update_image;
+    EditText et_update_brand, et_update_size, et_update_description;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create);
+        setContentView(R.layout.activity_update);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         super.init();
         init();
 
-        fab_create_back.setOnClickListener(new View.OnClickListener() {
+        fab_update_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goToList();
+                goToDetail(model);
             }
         });
 
-        fab_create_clear.setOnClickListener(new View.OnClickListener() {
+        fab_update_clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 clear();
             }
         });
 
-            fab_create_save.setOnClickListener(new View.OnClickListener() {
+        fab_update_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String brand, size, description;
                 boolean active;
-                brand = et_create_brand.getText().toString();
-                size = et_create_size.getText().toString();
-                description = et_create_description.getText().toString();
+                brand = et_update_brand.getText().toString();
+                size = et_update_size.getText().toString();
+                description = et_update_description.getText().toString();
 
                 if (brand.isEmpty() || size.isEmpty() || description.isEmpty()){
                     makeSimpleAlertDialog("Info", "Please fill all fields");
@@ -94,22 +93,22 @@ public class CreateActivity extends BaseActivity {
     }
 
     protected void init(){
-        fab_create_back = findViewById(R.id.fab_create_back);
-        fab_create_save = findViewById(R.id.fab_create_save);
-        fab_create_clear = findViewById(R.id.fab_create_clear);
-        iv_create_image = findViewById(R.id.iv_create_image);
-        et_create_brand = findViewById(R.id.et_update_brand);
-        et_create_size = findViewById(R.id.et_create_size);
-        et_create_description = findViewById(R.id.et_create_description);
+        fab_update_back = findViewById(R.id.fab_update_back);
+        fab_update_save = findViewById(R.id.fab_update_save);
+        fab_update_clear = findViewById(R.id.fab_update_clear);
+        iv_update_image = findViewById(R.id.iv_update_image);
+        et_update_brand = findViewById(R.id.et_update_brand);
+        et_update_size = findViewById(R.id.et_update_size);
+        et_update_description = findViewById(R.id.et_update_description);
     }
 
     private void clear(){
-        et_create_brand.setText("");
-        et_create_description.setText("");
-        et_create_size.setText("");
+        et_update_brand.setText("");
+        et_update_description.setText("");
+        et_update_size.setText("");
 
-        et_create_brand.requestFocus();
+        et_update_brand.requestFocus();
 
-        iv_create_image.setImageResource(R.drawable.ic_running_shoe);
+        iv_update_image.setImageResource(R.drawable.ic_running_shoe);
     }
 }

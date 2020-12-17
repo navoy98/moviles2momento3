@@ -81,7 +81,7 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     protected void goToEdit(){
-        Intent intent = new Intent(this, BaseActivity.class);
+        Intent intent = new Intent(this, UpdateActivity.class);
         startActivity(intent);
     }
 
@@ -93,6 +93,11 @@ public class BaseActivity extends AppCompatActivity {
     protected void goToDetail(ShoesModels model){
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra("model", model);
+        startActivity(intent);
+    }
+
+    protected void goToDelete(){
+        Intent intent = new Intent(this, ListActivity.class);
         startActivity(intent);
     }
 }

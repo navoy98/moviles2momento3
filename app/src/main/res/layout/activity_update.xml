@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity">
+    tools:context=".CreateActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,35 +21,33 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_detail" />
+    <include layout="@layout/content_update" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_detail_edit"
+        android:id="@+id/fab_update_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="145dp"
         app:maxImageSize="35dp"
-        app:srcCompat="@drawable/ic_crear" />
+        app:srcCompat="@drawable/ic_disquete" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_detail_delete"
+        android:id="@+id/fab_update_clear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginBottom="80dp"
         app:maxImageSize="35dp"
-        app:srcCompat="@drawable/ic_eliminar" />
-
+        app:srcCompat="@drawable/ic_escoba" />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_detail_list"
+        android:id="@+id/fab_update_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:layout_marginBottom="80dp"
         app:maxImageSize="35dp"
         app:srcCompat="@drawable/ic_atras" />
 

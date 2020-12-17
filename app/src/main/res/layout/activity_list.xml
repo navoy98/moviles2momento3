@@ -29,6 +29,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:maxImageSize="35dp"
-        app:srcCompat="@drawable/ic_crear" />
+        app:srcCompat="@drawable/ic_agregar_archivo" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
